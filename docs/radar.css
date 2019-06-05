@@ -17,3 +17,8 @@ td {
   vertical-align: top;
   padding-right: 60px;
 }
+
+.tooltip {
+	padding: 10px;
+	color: black;
+}

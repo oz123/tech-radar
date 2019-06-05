@@ -357,6 +357,12 @@ function radar_visualization(config) {
         .attr("height", bbox.height + 4);
       d3.select("#bubble path")
         .attr("transform", translate(bbox.width / 2 - 5, 3));
+
+      var tooltip = d3.select("#bubble");
+      tooltip.style("fill", "coral");
+      var fo = tooltip.append('foreignObject').attr('width', '50%')
+		    .attr('height', '100%').attr('class', 'tooltip');
+      var foDiv = fo.append("xhtml:body").append("xhtml:div").style('background', '#ccc').html("Used in: OSA\OPS, OSA\PRD<br>Professionals: Frank Lauterwald, Sebastioan Sonne<br>Client: Kunde1, Kunde2...</div>");
     }
   }
 
